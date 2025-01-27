@@ -1,0 +1,5 @@
+digraph "CFG for 'writeerr' function" {
+	label="CFG for 'writeerr' function";
+
+	Node0x564b11753510 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  call void @perror(ptr noundef @ofname)\l  %1 = call i32 @unlink(ptr noundef @ofname) #8\l  call void @exit(i32 noundef 1) #9\l  unreachable\l}"];
+}

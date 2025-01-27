@@ -1,0 +1,5 @@
+digraph "CFG for 'version' function" {
+	label="CFG for 'version' function";
+
+	Node0x564b1175b460 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = load ptr, ptr @stderr, align 8\l  %2 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef @.str.28,\l... ptr noundef @rcs_ident)\l  %3 = load ptr, ptr @stderr, align 8\l  %4 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %3, ptr noundef @.str.29)\l  %5 = load ptr, ptr @stderr, align 8\l  %6 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %5, ptr noundef @.str.30,\l... i32 noundef 16)\l  ret void\l}"];
+}

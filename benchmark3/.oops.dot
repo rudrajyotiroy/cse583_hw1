@@ -1,0 +1,10 @@
+digraph "CFG for 'oops' function" {
+	label="CFG for 'oops' function";
+
+	Node0x564b11724d30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  store i32 %0, ptr %2, align 4\l  %3 = load i32, ptr @do_decomp, align 4\l  %4 = icmp eq i32 %3, 1\l  br i1 %4, label %5, label %8\l|{<s0>T|<s1>F}}"];
+	Node0x564b11724d30:s0 -> Node0x564b11724d80[tooltip="1 -> 5\nProbability 50.00%" ];
+	Node0x564b11724d30:s1 -> Node0x564b11724dd0[tooltip="1 -> 8\nProbability 50.00%" ];
+	Node0x564b11724d80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{5:\l|  %6 = load ptr, ptr @stderr, align 8\l  %7 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %6, ptr noundef @.str.26)\l  br label %8\l}"];
+	Node0x564b11724d80 -> Node0x564b11724dd0[tooltip="5 -> 8\nProbability 100.00%" ];
+	Node0x564b11724dd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{8:\l|  %9 = call i32 @unlink(ptr noundef @ofname) #8\l  call void @exit(i32 noundef 1) #9\l  unreachable\l}"];
+}

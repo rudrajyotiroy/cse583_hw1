@@ -1,0 +1,5 @@
+digraph "CFG for 'onintr' function" {
+	label="CFG for 'onintr' function";
+
+	Node0x564b11724680 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = alloca i32, align 4\l  store i32 %0, ptr %2, align 4\l  %3 = call i32 @unlink(ptr noundef @ofname) #8\l  call void @exit(i32 noundef 1) #9\l  unreachable\l}"];
+}

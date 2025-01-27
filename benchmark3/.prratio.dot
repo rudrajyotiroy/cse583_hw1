@@ -1,0 +1,17 @@
+digraph "CFG for 'prratio' function" {
+	label="CFG for 'prratio' function";
+
+	Node0x564b1172cff0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{3:\l|  %4 = alloca ptr, align 8\l  %5 = alloca i64, align 8\l  %6 = alloca i64, align 8\l  %7 = alloca i32, align 4\l  store ptr %0, ptr %4, align 8\l  store i64 %1, ptr %5, align 8\l  store i64 %2, ptr %6, align 8\l  %8 = load i64, ptr %5, align 8\l  %9 = icmp sgt i64 %8, 214748\l  br i1 %9, label %10, label %16\l|{<s0>T|<s1>F}}"];
+	Node0x564b1172cff0:s0 -> Node0x564b11738580[tooltip="3 -> 10\nProbability 50.00%" ];
+	Node0x564b1172cff0:s1 -> Node0x564b117385d0[tooltip="3 -> 16\nProbability 50.00%" ];
+	Node0x564b11738580 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{10:\l|  %11 = load i64, ptr %5, align 8\l  %12 = load i64, ptr %6, align 8\l  %13 = sdiv i64 %12, 10000\l  %14 = sdiv i64 %11, %13\l  %15 = trunc i64 %14 to i32\l  store i32 %15, ptr %7, align 4\l  br label %22\l}"];
+	Node0x564b11738580 -> Node0x564b11738620[tooltip="10 -> 22\nProbability 100.00%" ];
+	Node0x564b117385d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70" fontname="Courier",label="{16:\l|  %17 = load i64, ptr %5, align 8\l  %18 = mul nsw i64 10000, %17\l  %19 = load i64, ptr %6, align 8\l  %20 = sdiv i64 %18, %19\l  %21 = trunc i64 %20 to i32\l  store i32 %21, ptr %7, align 4\l  br label %22\l}"];
+	Node0x564b117385d0 -> Node0x564b11738620[tooltip="16 -> 22\nProbability 100.00%" ];
+	Node0x564b11738620 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{22:\l|  %23 = load i32, ptr %7, align 4\l  %24 = icmp slt i32 %23, 0\l  br i1 %24, label %25, label %30\l|{<s0>T|<s1>F}}"];
+	Node0x564b11738620:s0 -> Node0x564b11738670[tooltip="22 -> 25\nProbability 37.50%" ];
+	Node0x564b11738620:s1 -> Node0x564b117386c0[tooltip="22 -> 30\nProbability 62.50%" ];
+	Node0x564b11738670 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{25:\l|  %26 = load ptr, ptr %4, align 8\l  %27 = call i32 @putc(i32 noundef 45, ptr noundef %26)\l  %28 = load i32, ptr %7, align 4\l  %29 = sub nsw i32 0, %28\l  store i32 %29, ptr %7, align 4\l  br label %30\l}"];
+	Node0x564b11738670 -> Node0x564b117386c0[tooltip="25 -> 30\nProbability 100.00%" ];
+	Node0x564b117386c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{30:\l|  %31 = load ptr, ptr %4, align 8\l  %32 = load i32, ptr %7, align 4\l  %33 = sdiv i32 %32, 100\l  %34 = load i32, ptr %7, align 4\l  %35 = srem i32 %34, 100\l  %36 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %31, ptr noundef\l... @.str.27, i32 noundef %33, i32 noundef %35)\l  ret void\l}"];
+}

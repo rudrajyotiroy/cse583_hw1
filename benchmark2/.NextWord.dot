@@ -1,0 +1,17 @@
+digraph "CFG for 'NextWord' function" {
+	label="CFG for 'NextWord' function";
+
+	Node0x56107a831b50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca ptr, align 8\l  %2 = alloca ptr, align 8\l  %3 = load i32, ptr @cpwCand, align 4\l  %4 = icmp uge i32 %3, 5000\l  br i1 %4, label %5, label %6, !prof !36\l|{<s0>T|<s1>F}}"];
+	Node0x56107a831b50:s0 -> Node0x56107a831be0[tooltip="0 -> 5\nProbability 0.00%" ];
+	Node0x56107a831b50:s1 -> Node0x56107a831c30[tooltip="0 -> 6\nProbability 100.00%" ];
+	Node0x56107a831be0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c7d7f070" fontname="Courier",label="{5:\l|  call void @Fatal(ptr noundef @.str.10, i32 noundef 0)\l  br label %6\l}"];
+	Node0x56107a831be0 -> Node0x56107a831c30[tooltip="5 -> 6\nProbability 100.00%" ];
+	Node0x56107a831c30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{6:\l|  %7 = load i32, ptr @cpwCand, align 4\l  %8 = add i32 %7, 1\l  store i32 %8, ptr @cpwCand, align 4\l  %9 = zext i32 %7 to i64\l  %10 = getelementptr inbounds [5000 x ptr], ptr @apwCand, i64 0, i64 %9\l  %11 = load ptr, ptr %10, align 8\l  store ptr %11, ptr %2, align 8\l  %12 = load ptr, ptr %2, align 8\l  %13 = icmp ne ptr %12, null\l  br i1 %13, label %14, label %16, !prof !37\l|{<s0>T|<s1>F}}"];
+	Node0x56107a831c30:s0 -> Node0x56107a831c80[tooltip="6 -> 14\nProbability 67.60%" ];
+	Node0x56107a831c30:s1 -> Node0x56107a831cd0[tooltip="6 -> 16\nProbability 32.40%" ];
+	Node0x56107a831c80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{14:\l|  %15 = load ptr, ptr %2, align 8\l  store ptr %15, ptr %1, align 8\l  br label %27\l}"];
+	Node0x56107a831c80 -> Node0x56107a831d20[tooltip="14 -> 27\nProbability 100.00%" ];
+	Node0x56107a831cd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{16:\l|  %17 = call ptr @NewWord()\l  %18 = load i32, ptr @cpwCand, align 4\l  %19 = sub i32 %18, 1\l  %20 = zext i32 %19 to i64\l  %21 = getelementptr inbounds [5000 x ptr], ptr @apwCand, i64 0, i64 %20\l  store ptr %17, ptr %21, align 8\l  %22 = load i32, ptr @cpwCand, align 4\l  %23 = sub i32 %22, 1\l  %24 = zext i32 %23 to i64\l  %25 = getelementptr inbounds [5000 x ptr], ptr @apwCand, i64 0, i64 %24\l  %26 = load ptr, ptr %25, align 8\l  store ptr %26, ptr %1, align 8\l  br label %27\l}"];
+	Node0x56107a831cd0 -> Node0x56107a831d20[tooltip="16 -> 27\nProbability 100.00%" ];
+	Node0x56107a831d20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{27:\l|  %28 = load ptr, ptr %1, align 8\l  ret ptr %28\l}"];
+}

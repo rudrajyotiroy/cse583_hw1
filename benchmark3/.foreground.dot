@@ -1,0 +1,17 @@
+digraph "CFG for 'foreground' function" {
+	label="CFG for 'foreground' function";
+
+	Node0x564b11758360 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca i32, align 4\l  %2 = load ptr, ptr @bgnd_flag, align 8\l  %3 = icmp ne ptr %2, null\l  br i1 %3, label %4, label %5\l|{<s0>T|<s1>F}}"];
+	Node0x564b11758360:s0 -> Node0x564b117583f0[tooltip="0 -> 4\nProbability 62.50%" ];
+	Node0x564b11758360:s1 -> Node0x564b11758440[tooltip="0 -> 5\nProbability 37.50%" ];
+	Node0x564b117583f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{4:\l|  store i32 0, ptr %1, align 4\l  br label %10\l}"];
+	Node0x564b117583f0 -> Node0x564b11758530[tooltip="4 -> 10\nProbability 100.00%" ];
+	Node0x564b11758440 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170" fontname="Courier",label="{5:\l|  %6 = call i32 @isatty(i32 noundef 2) #8\l  %7 = icmp ne i32 %6, 0\l  br i1 %7, label %8, label %9\l|{<s0>T|<s1>F}}"];
+	Node0x564b11758440:s0 -> Node0x564b11758490[tooltip="5 -> 8\nProbability 62.50%" ];
+	Node0x564b11758440:s1 -> Node0x564b117584e0[tooltip="5 -> 9\nProbability 37.50%" ];
+	Node0x564b11758490 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{8:\l|  store i32 1, ptr %1, align 4\l  br label %10\l}"];
+	Node0x564b11758490 -> Node0x564b11758530[tooltip="8 -> 10\nProbability 100.00%" ];
+	Node0x564b117584e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ca3b3770" fontname="Courier",label="{9:\l|  store i32 0, ptr %1, align 4\l  br label %10\l}"];
+	Node0x564b117584e0 -> Node0x564b11758530[tooltip="9 -> 10\nProbability 100.00%" ];
+	Node0x564b11758530 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{10:\l|  %11 = load i32, ptr %1, align 4\l  ret i32 %11\l}"];
+}

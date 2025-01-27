@@ -1,0 +1,5 @@
+digraph "CFG for 'Usage' function" {
+	label="CFG for 'Usage' function";
+
+	Node0x564b116f1d00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = load ptr, ptr @stderr, align 8\l  %2 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %1, ptr noundef @.str)\l  ret void\l}"];
+}

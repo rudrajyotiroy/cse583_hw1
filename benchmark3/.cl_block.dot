@@ -1,0 +1,26 @@
+digraph "CFG for 'cl_block' function" {
+	label="CFG for 'cl_block' function";
+
+	Node0x564b11758d30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = alloca i64, align 8\l  %2 = load i64, ptr @in_count, align 8\l  %3 = add nsw i64 %2, 10000\l  store i64 %3, ptr @checkpoint, align 8\l  %4 = load i64, ptr @in_count, align 8\l  %5 = icmp sgt i64 %4, 8388607\l  br i1 %5, label %6, label %17, !prof !36\l|{<s0>T|<s1>F}}"];
+	Node0x564b11758d30:s0 -> Node0x564b11758d80[tooltip="0 -> 6\nProbability 0.00%" ];
+	Node0x564b11758d30:s1 -> Node0x564b11758ec0[tooltip="0 -> 17\nProbability 100.00%" ];
+	Node0x564b11758d80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c7d7f070" fontname="Courier",label="{6:\l|  %7 = load i64, ptr @bytes_out, align 8\l  %8 = ashr i64 %7, 8\l  store i64 %8, ptr %1, align 8\l  %9 = load i64, ptr %1, align 8\l  %10 = icmp eq i64 %9, 0\l  br i1 %10, label %11, label %12\l|{<s0>T|<s1>F}}"];
+	Node0x564b11758d80:s0 -> Node0x564b11758dd0[tooltip="6 -> 11\nProbability 37.50%" ];
+	Node0x564b11758d80:s1 -> Node0x564b11758e20[tooltip="6 -> 12\nProbability 62.50%" ];
+	Node0x564b11758dd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c1d4f470" fontname="Courier",label="{11:\l|  store i64 2147483647, ptr %1, align 8\l  br label %16\l}"];
+	Node0x564b11758dd0 -> Node0x564b11758e70[tooltip="11 -> 16\nProbability 100.00%" ];
+	Node0x564b11758e20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5d6f270" fontname="Courier",label="{12:\l|  %13 = load i64, ptr @in_count, align 8\l  %14 = load i64, ptr %1, align 8\l  %15 = sdiv i64 %13, %14\l  store i64 %15, ptr %1, align 8\l  br label %16\l}"];
+	Node0x564b11758e20 -> Node0x564b11758e70[tooltip="12 -> 16\nProbability 100.00%" ];
+	Node0x564b11758e70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c7d7f070" fontname="Courier",label="{16:\l|  br label %22\l}"];
+	Node0x564b11758e70 -> Node0x564b11758f10[tooltip="16 -> 22\nProbability 100.00%" ];
+	Node0x564b11758ec0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{17:\l|  %18 = load i64, ptr @in_count, align 8\l  %19 = shl i64 %18, 8\l  %20 = load i64, ptr @bytes_out, align 8\l  %21 = sdiv i64 %19, %20\l  store i64 %21, ptr %1, align 8\l  br label %22\l}"];
+	Node0x564b11758ec0 -> Node0x564b11758f10[tooltip="17 -> 22\nProbability 100.00%" ];
+	Node0x564b11758f10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{22:\l|  %23 = load i64, ptr %1, align 8\l  %24 = load i64, ptr @ratio, align 8\l  %25 = icmp sgt i64 %23, %24\l  br i1 %25, label %26, label %28, !prof !37\l|{<s0>T|<s1>F}}"];
+	Node0x564b11758f10:s0 -> Node0x564b11758f60[tooltip="22 -> 26\nProbability 75.00%" ];
+	Node0x564b11758f10:s1 -> Node0x564b11758fb0[tooltip="22 -> 28\nProbability 25.00%" ];
+	Node0x564b11758f60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70" fontname="Courier",label="{26:\l|  %27 = load i64, ptr %1, align 8\l  store i64 %27, ptr @ratio, align 8\l  br label %30\l}"];
+	Node0x564b11758f60 -> Node0x564b11759000[tooltip="26 -> 30\nProbability 100.00%" ];
+	Node0x564b11758fb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c5333470" fontname="Courier",label="{28:\l|  store i64 0, ptr @ratio, align 8\l  %29 = load i64, ptr @hsize, align 8\l  call void @cl_hash(i64 noundef %29)\l  store i64 257, ptr @free_ent, align 8\l  store i32 1, ptr @clear_flg, align 4\l  call void @output(i64 noundef 256)\l  br label %30\l}"];
+	Node0x564b11758fb0 -> Node0x564b11759000[tooltip="28 -> 30\nProbability 100.00%" ];
+	Node0x564b11759000 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{30:\l|  ret void\l}"];
+}

@@ -6,7 +6,10 @@
 
 # ACTION REQUIRED: Ensure that the path to the library and pass name are correct.
 PATH2LIB="../build/hw1pass/HW1Pass.so"
-PASS=hw1
+# Following for stats
+# PASS=hw1
+# Following for graphs
+PASS=dot-cfg
 
 BENCH=src/${1}.c
 

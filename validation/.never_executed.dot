@@ -1,0 +1,5 @@
+digraph "CFG for 'never_executed' function" {
+	label="CFG for 'never_executed' function";
+
+	Node0x5597faae51e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{0:\l|  %1 = call i32 (ptr, ...) @printf(ptr noundef @.str)\l  ret void\l}"];
+}

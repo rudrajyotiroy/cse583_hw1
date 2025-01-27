@@ -1,0 +1,5 @@
+digraph "CFG for 'wprint' function" {
+	label="CFG for 'wprint' function";
+
+	Node0x56107a831110 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870" fontname="Courier",label="{1:\l|  %2 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %3 = load ptr, ptr %2, align 8\l  %4 = call i32 (ptr, ...) @printf(ptr noundef @.str.9, ptr noundef %3)\l  ret void\l}"];
+}
