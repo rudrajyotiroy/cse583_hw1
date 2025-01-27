@@ -4,6 +4,9 @@ mkdir -p build && cd build
 cmake ..
 make
 echo "Compile done"
+cd ../validation
+./run.sh toy
+echo "Toy example done"
 cd ../benchmark1
 ./run.sh simple
 echo "Benchmark 1 done"
