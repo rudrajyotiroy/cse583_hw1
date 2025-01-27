@@ -1,3 +1,5 @@
+git config --global user.name rudrajyotiroy
+git config --global user.email rudrajyotiroy@gmail.com
 mkdir -p build && cd build
 cmake ..
 make
